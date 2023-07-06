@@ -1,0 +1,28 @@
+const sellPrice = document.querySelector('#sell');
+const buyPrice = document.querySelector('#buy');
+const advCash = document.querySelector('#adv');
+const profit = document.querySelector('#profit');
+
+const deposit = 100;
+
+sellPrice.addEventListener('input', (event) => {
+    if(buyPrice.value === '' || sellPrice.value === '') {
+        console.log('введите цену покупки');
+    }       
+    else {
+        let itog = (deposit * parseFloat(sellPrice.value) * 0.98 - 50) / parseFloat(buyPrice.value);
+        advCash.value = (deposit * parseFloat(sellPrice.value) * 0.98 - 50).toFixed(2) + ' rub';
+        profit.value = (itog - deposit).toFixed(2) + ' usdt'
+    }
+}); 
+
+buyPrice.addEventListener('input', (event) => {
+    if(buyPrice.value === '' || sellPrice.value === '') {
+        console.log('введите данные');
+    }       
+    else {
+        let itog = (deposit * parseFloat(sellPrice.value) * 0.98 - 50) / parseFloat(buyPrice.value);
+        advCash.value = (deposit * parseFloat(sellPrice.value) * 0.98 - 50).toFixed(2) + ' rub';
+        profit.value = (itog - deposit).toFixed(2) + ' usdt';
+    }
+}); 
