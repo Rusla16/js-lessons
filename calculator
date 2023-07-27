@@ -1,3 +1,4 @@
+//code
 const sellPrice = document.querySelector('#sell');
 const buyPrice = document.querySelector('#buy');
 const advCash = document.querySelector('#adv');
